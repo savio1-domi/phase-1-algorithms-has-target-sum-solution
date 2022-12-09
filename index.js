@@ -1,17 +1,44 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
 
-/* 
+    // iterate over the array of numbers
+    for (let i = 0; i < array.length; i++) {
+      // for the current number, identify a complementary number that adds to our target
+      // (for example: if our number is 2, and the target is 5, the complementary number is 3)
+      const complement = target - array[i];
+      // iterate over the remaining numbers in the array
+      for (let j = i + 1; j < array.length; j++) {
+        // check if any of the remaining numbers is the complement
+        // if so, return true
+        if (array[j] === complement) return true;
+      }
+    }
+    // if we reach the end of the array, return false
+    return false;
+
+  }
+  
+  /* 
   Write the Big O time complexity of your function here
+  // for (let i = 0; i < array.length; i++) {
+  //   const complement = target - array[i];
+  //   for (let j = i + 1; j < array.length; j++) {
+  //     if (array[j] === complement) return true;
+  //   }
+  // }
+  // return false;
 */
 
 /* 
   Add your pseudocode here
+  iterate over the array of numbers
+  check if the remaining numbers is the complement return true 
+  if we reach the end of the array, return false
 */
 
 /*
   Add written explanation of your solution here
+  for the current number, identify a complementary number that adds to our target. Iterate over the remaining numbers to check of any remaining numbers that matches with the complement. If so it returns true, and if not it return false
 */
 
 // You can run `node index.js` to view these console logs
